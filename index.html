@@ -1,44 +1,102 @@
 
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0b0b0b">
 
   <title>Double Take World</title>
+
   <meta name="description"
         content="Double Take World — Lab, Press, Music, Coffee & Bar.">
 
   <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+  <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
 
   <link
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500&display=swap"
     rel="stylesheet">
 
+  <!-- Main stylesheet -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- Logo positioning -->
+  <style>
+    .brand-logo {
+      display: block;
+      width: 110px;
+      height: auto;
+      margin-top: 38px;
+      object-fit: contain;
+    }
+
+    @media (max-width: 480px) {
+      .brand-logo {
+        width: 85px;
+        margin-top: 30px;
+      }
+    }
+  </style>
+
 </head>
 
 <body>
+
   <main class="shell">
 
-    <section class="hero" aria-label="Double Take World">
+    <!-- Main brand identity -->
+    <section class="hero"
+             aria-label="Double Take World">
+
       <div class="shortline"></div>
 
+      <!-- Brand name -->
       <h1>DOUBLE TAKE</h1>
 
+      <!-- World subtitle -->
       <div class="world">WORLD</div>
+
+      <!-- Double Take logo -->
+      <img
+        src="double-take-logo-ivory.svg"
+        alt="Double Take logo"
+        class="brand-logo"
+        width="110">
+
     </section>
 
-    <nav class="nav" aria-label="Our divisions">
-      <a href="lab/">LAB</a>
-      <a href="press/">PRESS</a>
-      <a href="music/">MUSIC</a>
-      <a href="coffee-bar/">COFFEE &amp; BAR</a>
+    <!-- Four divisions -->
+    <nav class="nav"
+         aria-label="Our divisions">
+
+      <a href="lab/">
+        LAB
+      </a>
+
+      <a href="press/">
+        PRESS
+      </a>
+
+      <a href="music/">
+        MUSIC
+      </a>
+
+      <a href="coffee-bar/">
+        COFFEE &amp; BAR
+      </a>
+
     </nav>
 
   </main>
+
 </body>
 </html>
+
