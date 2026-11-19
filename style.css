@@ -1,16 +1,20 @@
 
-/* ========================================
+/* =========================================
    DOUBLE TAKE WORLD
-   Black & Gold · Cormorant Garamond
-======================================== */
+   Black & Muted Gold
+   Cormorant Garamond + Inter
+========================================= */
 
 :root {
   color-scheme: dark;
+
   --black: #0b0b0b;
-  --white: #f0ece3;
+  --white: #a99a7e;
   --gold: #a99a7e;
-  --line: #51493c;
+  --line: #a99a7e;
 }
+
+/* Reset */
 
 * {
   box-sizing: border-box;
@@ -24,8 +28,8 @@ body {
   margin: 0;
   min-height: 100vh;
   background: var(--black);
-  color: var(--white);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--gold);
+  font-family: "Inter", Arial, sans-serif;
 }
 
 a {
@@ -38,75 +42,111 @@ a:focus-visible {
   outline-offset: 8px;
 }
 
-/* Main layout */
+/* =========================================
+   Main layout
+========================================= */
 
 .shell {
   min-height: 100vh;
   min-height: 100svh;
-  max-width: 1200px;
-  margin: auto;
-  padding: 34px clamp(20px, 5vw, 70px);
+
+  max-width: 1600px;
+  margin: 0 auto;
+
+  padding: 25px clamp(20px, 5vw, 70px);
+
   display: flex;
   flex-direction: column;
 }
 
-/* Top mark */
-
-.topmark {
-  text-align: center;
-  color: var(--gold);
-  font-size: 10px;
-  letter-spacing: 0.4em;
-}
-
-/* Homepage */
+/* =========================================
+   Homepage hero
+========================================= */
 
 .hero {
   flex: 1;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
   text-align: center;
-  padding: 90px 0 70px;
+
+  /* Shift composition upward */
+  padding: 20px 0 125px;
 }
 
 .shortline {
+  width: 44px;
   height: 1px;
-  width: 34px;
   background: var(--gold);
   margin-bottom: 35px;
 }
 
-/* New Cormorant Garamond title */
+/* DOUBLE TAKE */
 
 .hero h1 {
-  font-family: "Cormorant Garamond", Georgia, serif;
+  font-family: "Cormorant Garamond",
+               Georgia, serif;
+
+  font-size: clamp(56px, 8.5vw, 140px);
   font-weight: 400;
-  letter-spacing: 0.055em;
-  font-size: clamp(48px, 8vw, 112px);
+
+  letter-spacing: 0.045em;
   line-height: 1;
+
+  color: var(--gold);
   margin: 0;
 }
 
-/* WORLD subtitle */
+/* WORLD */
 
 .world {
-  font-family: Arial, Helvetica, sans-serif;
-  letter-spacing: 0.7em;
-  margin: 30px 0 0;
-  padding-left: 0.7em;
+  font-family: "Inter", Arial, sans-serif;
+
+  font-size: 20px;
+  font-weight: 400;
+
+  letter-spacing: 0.5em;
+  padding-left: 0.5em;
+
   color: var(--gold);
-  font-size: 11px;
+  margin-top: 28px;
 }
 
-/* Four divisions */
+/* =========================================
+   Double Take Logo
+========================================= */
+
+.brand-logo {
+  display: block;
+
+  width: clamp(160px, 16vw, 220px);
+  height: auto;
+
+  margin-top: 22px;
+
+  object-fit: contain;
+
+  /* Recolor ivory SVG to muted gold */
+  filter: brightness(0) saturate(100%)
+          invert(68%) sepia(13%)
+          saturate(637%) hue-rotate(357deg)
+          brightness(90%) contrast(87%);
+}
+
+/* =========================================
+   Navigation
+========================================= */
 
 .nav {
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
+
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
+
   min-height: 100px;
 }
 
@@ -114,119 +154,204 @@ a:focus-visible {
   display: flex;
   justify-content: center;
   align-items: center;
+
   text-align: center;
-  padding: 20px 4px;
 
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: clamp(9px, 1.25vw, 14px);
+  padding: 20px 8px;
+
+  font-family: "Inter", Arial, sans-serif;
+
+  font-size: 20px;
   font-weight: 400;
-  letter-spacing: 0.11em;
 
-  transition: color 0.2s ease;
+  letter-spacing: 0.12em;
+
+  color: var(--gold);
+
+  transition: opacity 0.2s ease;
 }
 
-.nav a:hover,
-.back:hover {
+.nav a:hover {
+  opacity: 0.65;
+}
+
+/* =========================================
+   Division pages
+========================================= */
+
+.topmark {
+  text-align: center;
   color: var(--gold);
+
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.4em;
+}
+
+.sectionhero {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  padding: 80px 0;
+}
+
+.sectionhero h1 {
+  font-family: "Cormorant Garamond",
+               Georgia, serif;
+
+  font-weight: 400;
+  letter-spacing: 0.06em;
+
+  font-size: clamp(48px, 7vw, 100px);
+
+  color: var(--gold);
+  margin: 30px 0;
+}
+
+.sectionhero p,
+.division-motto {
+  color: var(--gold);
+
+  font-family: "Cormorant Garamond",
+               Georgia, serif;
+
+  font-size: clamp(20px, 2.5vw, 28px);
+  font-style: italic;
+  font-weight: 400;
+
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+
+.division-motto {
+  margin-top: 20px;
+}
+
+/* Back to main site */
+
+.back {
+  display: block;
+  text-align: center;
+
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+
+  padding: 30px;
+
+  color: var(--gold);
+
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.18em;
+
+  transition: opacity 0.2s ease;
+}
+
+.back:hover {
+  opacity: 0.65;
 }
 
 /* Footer */
 
 footer {
   text-align: center;
-  color: #776c5b;
-  font-size: 10px;
+  color: var(--gold);
+
+  font-size: 11px;
   letter-spacing: 0.22em;
-  padding-top: 46px;
-  padding-bottom: 14px;
+
+  padding: 35px 0 14px;
 }
 
-/* Division pages */
+/* =========================================
+   Tablet
+========================================= */
 
-.sectionhero {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 80px 0;
+@media (max-width: 900px) {
+
+  .hero h1 {
+    font-size: clamp(55px, 9vw, 100px);
+  }
+
+  .nav a {
+    font-size: 16px;
+  }
+
+  .world {
+    font-size: 16px;
+  }
+
+  .brand-logo {
+    width: 180px;
+  }
 }
 
-.sectionhero h1 {
-  font-family: "Cormorant Garamond", Georgia, serif;
-  font-weight: 400;
-  letter-spacing: 0.08em;
-  font-size: clamp(48px, 7vw, 90px);
-  margin: 30px 0;
-}
-
-.sectionhero p {
-  color: var(--gold);
-  font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: clamp(18px, 2vw, 24px);
-  font-style: italic;
-}
-
-/* Division slogans */
-
-.division-motto {
-  margin-top: 20px;
-  color: var(--gold);
-  font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: clamp(20px, 2.5vw, 28px);
-  font-style: italic;
-  font-weight: 400;
-  letter-spacing: 0.02em;
-  text-align: center;
-}
-
-/* Back navigation */
-
-.back {
-  display: block;
-  text-align: center;
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-  padding: 30px;
-  color: var(--white);
-  font-size: 12px;
-  letter-spacing: 0.18em;
-}
-
-/* Mobile */
+/* =========================================
+   Mobile
+========================================= */
 
 @media (max-width: 480px) {
 
   .shell {
-    padding: 24px 14px;
-  }
-
-  .nav {
-    min-height: 85px;
-  }
-
-  .nav a {
-    letter-spacing: 0;
-    font-size: 9px;
+    padding: 20px 14px;
   }
 
   .hero {
-    padding: 80px 0 60px;
+    padding: 30px 0 85px;
+  }
+
+  .shortline {
+    width: 34px;
+    margin-bottom: 30px;
   }
 
   .hero h1 {
-    font-size: clamp(42px, 11vw, 65px);
+    font-size: clamp(40px, 11vw, 65px);
     letter-spacing: 0.025em;
   }
 
   .world {
-    letter-spacing: 0.45em;
-    padding-left: 0.45em;
-    margin-top: 24px;
+    font-size: 14px;
+    letter-spacing: 0.4em;
+    padding-left: 0.4em;
+    margin-top: 25px;
+  }
+
+  .brand-logo {
+    width: 155px;
+    margin-top: 22px;
+  }
+
+  .nav {
+    min-height: 90px;
+  }
+
+  .nav a {
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    padding: 12px 3px;
   }
 
   .sectionhero h1 {
     font-size: clamp(42px, 11vw, 70px);
   }
 }
+
+/* Short screens */
+
+@media (max-height: 650px) {
+  .hero {
+    padding-top: 25px;
+    padding-bottom: 45px;
+  }
+
+  .brand-logo {
+    width: 150px;
+  }
+}
+
