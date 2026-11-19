@@ -6,3 +6,14 @@
 .masthead .chinese-name {font:400 clamp(18px,2.1vw,26px)/1.5 'Noto Serif TC','Songti TC',serif;letter-spacing:.32em;padding-left:.32em;margin:16px 0 0;}
 .masthead .motto {margin-top:10px;}
 @media(max-width:560px){.masthead h1{font-size:clamp(24px,6.2vw,38px);letter-spacing:0;}.masthead .chinese-name{font-size:18px;letter-spacing:.18em;padding-left:.18em;}}
+
+/* WeChat Official Account QR dialog */
+.wechat-trigger { background: none; border: 0; color: inherit; font: inherit; letter-spacing: inherit; padding: 0; cursor: pointer; }
+.wechat-trigger:hover { opacity: .72; }
+.wechat-dialog { position: fixed; inset: 0; margin: auto; max-width: min(92vw, 410px); max-height: 90vh; padding: 0; border: 1px solid #a99a7e; background: #0b0b0b; color: #a99a7e; box-shadow: 0 20px 80px #0009; }
+.wechat-dialog::backdrop { background: rgba(0,0,0,.78); }
+.wechat-dialog-inner { position: relative; padding: 38px 30px 26px; text-align: center; }
+.wechat-dialog .eyebrow { margin: 0 0 22px; }
+.wechat-dialog img { display: block; width: min(100%, 300px); height: auto; margin: auto; background: #fff; }
+.wechat-dialog p { margin: 18px 0 0; font-size: 14px; letter-spacing: .08em; }
+.wechat-close { position: absolute; right: 12px; top: 8px; border: 0; background: transparent; color: #a99a7e; font-size: 30px; line-height: 1; cursor: pointer; }
