@@ -17,3 +17,51 @@
 .wechat-dialog img { display: block; width: min(100%, 300px); height: auto; margin: auto; background: #fff; }
 .wechat-dialog p { margin: 18px 0 0; font-size: 14px; letter-spacing: .08em; }
 .wechat-close { position: absolute; right: 12px; top: 8px; border: 0; background: transparent; color: #a99a7e; font-size: 30px; line-height: 1; cursor: pointer; }
+
+
+/* Unified footer typography */
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 28px;
+}
+
+.footer-links a,
+.footer-links button,
+.footer-links span {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  line-height: 1.5;
+  color: #a99a7e;
+}
+
+.footer-links button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.footer .small {
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  color: #a99a7e;
+  margin-top: 28px;
+}
+
+@media (max-width: 600px) {
+  .footer-links {
+    gap: 14px 22px;
+  }
+
+  .footer-links a,
+  .footer-links button,
+  .footer-links span {
+    font-size: 14px;
+  }
+}
