@@ -355,3 +355,17 @@ footer {
   }
 }
 
+/* Raise the four navigation sections */
+
+.shell {
+  padding-bottom: 85px;
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .shell {
+    padding-bottom: 65px;
+  }
+}
+
+
