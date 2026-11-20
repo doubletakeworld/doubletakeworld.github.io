@@ -99,3 +99,9 @@
   outline-offset: 4px;
 }
 
+
+@media (min-width: 900px) {
+  .feature-grid {
+    grid-template-columns: 0.8fr 1.2fr;
+  }
+}
