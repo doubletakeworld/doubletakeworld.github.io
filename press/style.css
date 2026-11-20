@@ -65,3 +65,37 @@
     font-size: 14px;
   }
 }
+
+
+/* Instagram gallery */
+.insta-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.insta-post {
+  display: block;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border: 1px solid #51483b;
+  background: #211e19;
+}
+
+.insta-post img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.insta-post:hover img {
+  transform: scale(1.04);
+}
+
+.insta-post:focus-visible {
+  outline: 2px solid #a99a7e;
+  outline-offset: 4px;
+}
+
