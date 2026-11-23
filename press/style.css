@@ -110,18 +110,18 @@
 }
 
 .editorial-team {
-  text-align: center;
-  margin: 48px auto;
-  max-width: 500px;
+  text-align: left;
+  margin: 40px 0;
+  max-width: none;
 }
 
 .editor-photo {
   display: block;
   width: 220px;
-  height: 220px;
-  object-fit: cover;
-  margin: 24px auto;
-  filter: grayscale(100%);
+  height: auto;
+  object-fit: contain;
+  margin: 24px 0;
+  filter: none;
 }
 
 .editorial-team h3 {
@@ -131,4 +131,5 @@
 
 .editorial-team p {
   line-height: 1.7;
+  text-align: left;
 }
