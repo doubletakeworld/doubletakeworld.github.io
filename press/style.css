@@ -108,3 +108,27 @@
     grid-template-columns: 0.8fr 1.2fr;
   }
 }
+
+.editorial-team {
+  text-align: center;
+  margin: 48px auto;
+  max-width: 500px;
+}
+
+.editor-photo {
+  display: block;
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  margin: 24px auto;
+  filter: grayscale(100%);
+}
+
+.editorial-team h3 {
+  margin: 16px 0 12px;
+  font-size: 1.3rem;
+}
+
+.editorial-team p {
+  line-height: 1.7;
+}
